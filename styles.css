@@ -1,0 +1,370 @@
+/* Estilo geral do corpo */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff6f6;
+    color: #234719;
+    margin: 20px;
+    padding: 0;
+}
+
+/* Container centralizado */
+.container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff6f6;
+    background-image: url("img/petalas.png");
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Título principal */
+h1 {
+    text-align: center;
+    color: #234719;
+}
+
+/* Legenda no topo */
+.legend {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.legend span {
+    margin-right: 20px;
+    font-weight: bold;
+}
+
+/* Seção das perguntas */
+.section {
+    margin-bottom: 30px;
+}
+
+/* Cada pergunta */
+.question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 10px 0;
+    border-bottom: 1px solid #1f7a08be;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Estilo para as perguntas (lado esquerdo) */
+.left {
+    flex: 3;
+    font-size: 16px;
+    color: #234719;
+    padding-right: 20px;
+}
+
+/* Estilo para as alternativas (lado direito) */
+.right {
+    flex: 2;
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    flex-wrap: nowrap; /* Garante que as opções não quebrem linha */
+    flex-direction: row; /* Alinha as opções em linha */
+    align-items: center; /* Alinha as opções verticalmente no centro */
+}
+
+/* Estilo dos inputs radio */
+input[type="radio"] {
+    display: none;
+}
+
+/* Estilo para os labels das alternativas */
+.right label {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #ebf3e9;
+    color: #234719;
+    border-radius: 5px;
+    width: 38px;
+    height: 38px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Efeito de hover nos labels */
+.right label:hover {
+    background-color: #234719;
+    color: white;
+}
+
+/* Quando o input radio está marcado */
+input[type="radio"]:checked + label {
+    background-color: #234719;
+    color: #fff;
+}
+
+/* Estilo dos botões */
+button {
+    margin-top: 20px;
+    padding: 12px;
+    font-size: 16px;
+    width: 100%;
+    color: #fff;
+    background-color: #234719;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #1d4013;
+}
+
+/* Estilo para o resultado */
+#result {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #234719;
+    text-align: center;
+}
+
+/* Estilos para a exibição da categoria de zona */
+.category-result {
+    margin-top: 30px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 16px;
+    width: 100%; /* A área ocupa 100% da largura do contêiner */
+    max-width: 600px; /* Limita a largura máxima */
+    margin-left: auto;
+    margin-right: auto; /* Centraliza a área */
+}
+
+.green {
+    background-color: #28a745; /* Verde */
+    color: white;
+}
+
+.yellow {
+    background-color: #ffc107; /* Amarelo */
+    color: black;
+}
+
+.red {
+    background-color: #dc3545; /* Vermelho */
+    color: white;
+}
+
+
+/* Estilo para as colunas de labels (letras) e números */
+.right {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Espaçamento entre as colunas */
+    
+  }
+  
+  .label-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza as letras e os números */
+    width: 40px;
+    height: 40px;
+    
+
+  }
+  
+  /* Ajusta o estilo das letras acima dos números */
+  .letter {
+    margin-bottom: 5px; /* Espaço entre a letra e o número */
+    font-weight: bold;
+    font-size: 16px;
+    color: #234719;
+    pointer-events: none; /* Garante que as letras não sejam interativas */
+    border-bottom: 2px solid #234719; /* Adiciona a linha abaixo das letras */
+    padding-bottom: 5px; /* Espaço entre a letra e a linha */
+    
+  }
+  
+  /* Ajuste para os inputs de radio */
+  .right input[type="radio"] {
+    display: none; /* Não exibe o botão de rádio */
+  }
+  
+  /* Estilo para os labels das alternativas */
+  .right label {
+    background: #ebf3e9;
+    color: #234719;
+    border-radius: 5px;
+    width: 38px;
+    height: 38px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  /* Efeito de hover nos labels */
+  .right label:hover {
+    background-color: #234719;
+    color: white;
+  }
+  
+  /* Quando o input radio está marcado */
+  input[type="radio"]:checked + label {
+    background-color: #234719;
+    color: #fff;
+  }
+  
+
+  /* informaçoes de paciente  */
+  .info label {
+    display: block;
+    margin: 8px 0;
+}
+.info input[type="text"], 
+.info input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+#total-score, .category-score {
+    font-size: 18px;
+    font-weight: bold;
+    color: #234719;
+}
+.info {
+    margin-bottom: 20px;
+}
+
+.info label {
+    display: block;
+    font-weight: bold;
+    color:  #234719;
+    margin: 12px 0 6px;
+}
+
+.info input[type="text"],
+.info input[type="number"],
+.info textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-top: 5px;
+    background-color: #f4f6f9;
+    transition: border-color 0.3s;
+}
+
+.info input[type="text"]:focus,
+.info input[type="number"]:focus,
+.info textarea:focus {
+    border-color: #4a90e2;
+    outline: none;
+}
+
+.info textarea {
+    resize: vertical;
+    min-height: 80px;
+    max-height: 200px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+        margin: 15px;
+    }
+
+    .left {
+        font-size: 14px;
+        padding-right: 10px;
+    }
+
+    .right {
+        flex: 2; /* Ajuste para manter ao lado da pergunta */
+        font-size: 14px;
+    }
+
+    .question {
+        flex-wrap: nowrap; /* Impede as opções de irem para baixo */
+        align-items: center; /* Alinha as opções verticalmente no centro */
+    }
+
+    button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 20px;
+    }
+
+    .legend span {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .left,
+    .right {
+        font-size: 14px;
+    }
+
+    .question {
+        flex-wrap: nowrap; /* Impede as opções de irem para baixo */
+        align-items: center; /* Alinha as opções verticalmente no centro */
+    }
+
+    button {
+        width: 100%;
+    }
+}
+/* Responsividade para a categoria-result */
+@media (max-width: 768px) {
+    .category-result {
+        font-size: 16px; /* Reduz o tamanho da fonte para telas menores */
+        padding: 15px; /* Ajusta o padding */
+        max-width: 50vw; /* Define a largura máxima para telas médias */
+        width: 90%; /* Ajusta a largura da área para 90% da tela */
+        margin-left: auto;
+        margin-right: auto; /* Centraliza a área */
+    }
+}
+
+@media (max-width: 480px) {
+    .category-result {
+        font-size: 16px; /* Tamanho da fonte ainda menor em telas muito pequenas */
+        padding: 10px; /* Ajuste do padding */
+        max-width: 40vw; /* Define a largura máxima para telas pequenas */
+        width: 90%; /* Ajusta a largura da área para 90% da tela */
+        margin-left: auto;
+        margin-right: auto; /* Centraliza a área */
+    }
+}
+

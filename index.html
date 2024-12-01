@@ -1,0 +1,1281 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Avaliação de Parasitas</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Estética e Saúde Integrativa</h1>
+    <h1>Avaliação de Parasitas</h1>
+    <form id="parasiteForm">
+      <div class="info">
+        <label>Paciente: <input type="text" name="paciente" required></label>
+        <label>Idade: <input type="number" name="idade" required></label>
+        <label>Peso: <input type="text" name="peso" required></label>
+        <label>Altura: <input type="text" name="altura" required></label>
+
+      </div>
+      <div>
+        <p style="text-align: justify; background-color: #f8f8f8c2; color: #130101;">
+          Avalie seus sintomas, responda de acordo com a frequência. No final, clique em <strong>calcular
+            pontuação</strong>,
+          e depois clique em <strong>enviar resultados</strong>. <br><br>
+          <strong>Verifique se não está faltando marcar alguma alternativa, pois caso falte, o relatório não consegue
+            ser enviado.</strong>
+          <br><br> Responda a essas perguntas da melhor forma possível, pensando em como tem se sentido no último mês.
+          <br><br>
+        </p>
+
+      </div>
+
+
+      <!-- Legenda -->
+      <div class="legend">
+        <span>Legenda: </span>
+        <span><strong>A</strong> - Nunca</span>
+        <span><strong>B</strong> - Ocasionalmente</span>
+        <span><strong>C</strong> - Frequentemente</span>
+        <span><strong>D</strong> - Regularmente</span>
+      </div>
+
+      <!-- Perguntas com opções numéricas e formato de colunas -->
+      <!-- Pergunta 1: Letra (não clicável) -->
+      <div class="section">
+        <div class="question">
+          <div class="left"></div>
+          <div class="right">
+            <!-- Letra A (não clicável) -->
+            <div class="label-column">
+              <label class="letter">A</label>
+              <input type="radio" id="sleep-A-0" name="sleep-A" value="0" disabled>
+              <!-- Desabilitado para não ser clicável -->
+            </div>
+
+            <!-- Letra B (não clicável) -->
+            <div class="label-column">
+              <label class="letter">B</label>
+              <input type="radio" id="sleep-B-1" name="sleep-B" value="1" disabled>
+              <!-- Desabilitado para não ser clicável -->
+            </div>
+
+            <!-- Letra C (não clicável) -->
+            <div class="label-column">
+              <label class="letter">C</label>
+              <input type="radio" id="sleep-C-2" name="sleep-C" value="2" disabled>
+              <!-- Desabilitado para não ser clicável -->
+            </div>
+
+            <!-- Letra D (não clicável) -->
+            <div class="label-column">
+              <label class="letter">D</label>
+              <input type="radio" id="sleep-D-3" name="sleep-D" value="3" disabled>
+              <!-- Desabilitado para não ser clicável -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pergunta 2: Seleção de respostas -->
+      <div class="question">
+        <div class="left">Sono agitado (vira, mexe ou acorda frequentemente):</div>
+        <div class="right">
+          <!-- Radio button para 0 -->
+          <div class="label-column">
+            <input type="radio" id="sleep-0" name="sleep" value="0">
+            <label for="sleep-0">0</label>
+          </div>
+
+          <!-- Radio button para 1 -->
+          <div class="label-column">
+            <input type="radio" id="sleep-1" name="sleep" value="1">
+            <label for="sleep-1">1</label>
+          </div>
+
+          <!-- Radio button para 2 -->
+          <div class="label-column">
+            <input type="radio" id="sleep-2" name="sleep" value="2">
+            <label for="sleep-2">2</label>
+          </div>
+
+          <!-- Radio button para 3 -->
+          <div class="label-column">
+            <input type="radio" id="sleep-3" name="sleep" value="3">
+            <label for="sleep-3">3</label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pergunta 2 -->
+      <div class="question">
+        <div class="left">Problemas de pele, como erupções, coceiras, urticária, eczema ou acne:</div>
+        <div class="right">
+          <!-- Radio button para 0 -->
+          <input type="radio" id="skin-0" name="skin" value="0">
+          <label for="skin-0">0</label>
+
+          <!-- Radio button para 2 -->
+          <input type="radio" id="skin-2" name="skin" value="2">
+          <label for="skin-2">2</label>
+
+          <!-- Radio button para 4 -->
+          <input type="radio" id="skin-4" name="skin" value="4">
+          <label for="skin-4">4</label>
+
+          <!-- Radio button para 6 -->
+          <input type="radio" id="skin-6" name="skin" value="6">
+          <label for="skin-6">6</label>
+        </div>
+      </div>
+
+
+      <!-- Pergunta 3 -->
+      <div class="question">
+        <div class="left">Diarreia frequente ou fezes soltas:</div>
+        <div class="right">
+          <!-- Radio button para 0 -->
+          <input type="radio" id="diarrhea-0" name="diarrhea" value="0">
+          <label for="diarrhea-0">0</label>
+
+          <!-- Radio button para 1 -->
+          <input type="radio" id="diarrhea-1" name="diarrhea" value="1">
+          <label for="diarrhea-1">1</label>
+
+          <!-- Radio button para 2 -->
+          <input type="radio" id="diarrhea-2" name="diarrhea" value="2">
+          <label for="diarrhea-2">2</label>
+
+          <!-- Radio button para 3 -->
+          <input type="radio" id="diarrhea-3" name="diarrhea" value="3">
+          <label for="diarrhea-3">3</label>
+        </div>
+      </div>
+
+
+      <!-- Pergunta 4 -->
+      <div class="question">
+        <div class="left">Constipação alternada com diarreia:</div>
+        <div class="right">
+          <!-- Radio button para 0 -->
+          <input type="radio" id="constipation-0" name="constipation" value="0">
+          <label for="constipation-0">0</label>
+
+          <!-- Radio button para 1 -->
+          <input type="radio" id="constipation-1" name="constipation" value="1">
+          <label for="constipation-1">1</label>
+
+          <!-- Radio button para 2 -->
+          <input type="radio" id="constipation-2" name="constipation" value="2">
+          <label for="constipation-2">2</label>
+
+          <!-- Radio button para 3 -->
+          <input type="radio" id="constipation-3" name="constipation" value="3">
+          <label for="constipation-3">3</label>
+        </div>
+      </div>
+
+
+      <!-- Pergunta 5 -->
+      <div class="question">
+        <div class="left">SIBO (supercrescimento bacteriano no intestino delgado), sensação de inchaço ou gases:</div>
+        <div class="right">
+          <!-- Radio button para 0 -->
+          <input type="radio" id="sibo-0" name="sibo" value="0">
+          <label for="sibo-0">0</label>
+
+          <!-- Radio button para 1 -->
+          <input type="radio" id="sibo-1" name="sibo" value="1">
+          <label for="sibo-1">1</label>
+
+          <!-- Radio button para 2 -->
+          <input type="radio" id="sibo-2" name="sibo" value="2">
+          <label for="sibo-2">2</label>
+
+          <!-- Radio button para 3 -->
+          <input type="radio" id="sibo-3" name="sibo" value="3">
+          <label for="sibo-3">3</label>
+        </div>
+      </div>
+
+
+      <!-- Pergunta 6 -->
+      <div class="question">
+        <div class="left">Urgência para evacuar, acidentes ocasionais:</div>
+        <div class="right">
+          <!-- Radio button para 0 -->
+          <input type="radio" id="urgency-0" name="urgency" value="0">
+          <label for="urgency-0">0</label>
+
+          <!-- Radio button para 1 -->
+          <input type="radio" id="urgency-1" name="urgency" value="1">
+          <label for="urgency-1">1</label>
+
+          <!-- Radio button para 2 -->
+          <input type="radio" id="urgency-2" name="urgency" value="2">
+          <label for="urgency-2">2</label>
+
+          <!-- Radio button para 3 -->
+          <input type="radio" id="urgency-3" name="urgency" value="3">
+          <label for="urgency-3">3</label>
+        </div>
+      </div>
+
+
+      <!-- Pergunta 7 -->
+      <div class="question">
+        <div class="left">Dores abdominais, cólicas ou queimação:</div>
+        <div class="right">
+          <!-- Radio button para 0 -->
+          <input type="radio" id="abdominalPain-0" name="abdominalPain" value="0">
+          <label for="abdominalPain-0">0</label>
+
+          <!-- Radio button para 1 -->
+          <input type="radio" id="abdominalPain-1" name="abdominalPain" value="1">
+          <label for="abdominalPain-1">1</label>
+
+          <!-- Radio button para 2 -->
+          <input type="radio" id="abdominalPain-2" name="abdominalPain" value="2">
+          <label for="abdominalPain-2">2</label>
+
+          <!-- Radio button para 3 -->
+          <input type="radio" id="abdominalPain-3" name="abdominalPain" value="3">
+          <label for="abdominalPain-3">3</label>
+        </div>
+      </div>
+
+
+      <!-- Pergunta 8 -->
+      <div class="question">
+        <div class="left">Coceira retal ou anal:</div>
+        <div class="right">
+          <!-- Radio button para 0 -->
+          <input type="radio" id="itching-0" name="itching" value="0">
+          <label for="itching-0">0</label>
+
+          <!-- Radio button para 2 -->
+          <input type="radio" id="itching-2" name="itching" value="2">
+          <label for="itching-2">2</label>
+
+          <!-- Radio button para 4 -->
+          <input type="radio" id="itching-4" name="itching" value="4">
+          <label for="itching-4">4</label>
+
+          <!-- Radio button para 6 -->
+          <input type="radio" id="itching-6" name="itching" value="6">
+          <label for="itching-6">6</label>
+        </div>
+      </div>
+
+
+      <!-- Pergunta 9 -->
+      <div class="question">
+        <div class="left">Fissuras anais (pequenos cortes dolorosos):</div>
+        <div class="right">
+          <!-- Radio button para 0 -->
+          <input type="radio" id="fissuras-0" name="fissuras" value="0">
+          <label for="fissuras-0">0</label>
+
+          <!-- Radio button para 1 -->
+          <input type="radio" id="fissuras-1" name="fissuras" value="1">
+          <label for="fissuras-1">1</label>
+
+          <!-- Radio button para 2 -->
+          <input type="radio" id="fissuras-2" name="fissuras" value="2">
+          <label for="fissuras-2">2</label>
+
+          <!-- Radio button para 3 -->
+          <input type="radio" id="fissuras-3" name="fissuras" value="3">
+          <label for="fissuras-3">3</label>
+        </div>
+      </div>
+
+
+      <!-- Pergunta 10 -->
+      <div class="question">
+        <div class="left">Úlceras ou lesões no estômago ou intestino delgado:</div>
+        <div class="right">
+          <!-- Radio button para 0 -->
+          <input type="radio" id="ulceras-0" name="ulceras" value="0">
+          <label for="ulceras-0">0</label>
+
+          <!-- Radio button para 1 -->
+          <input type="radio" id="ulceras-1" name="ulceras" value="1">
+          <label for="ulceras-1">1</label>
+
+          <!-- Radio button para 2 -->
+          <input type="radio" id="ulceras-2" name="ulceras" value="2">
+          <label for="ulceras-2">2</label>
+
+          <!-- Radio button para 3 -->
+          <input type="radio" id="ulceras-3" name="ulceras" value="3">
+          <label for="ulceras-3">3</label>
+        </div>
+      </div>
+
+
+      <!-- Pergunta 11 -->
+      <div class="question">
+        <div class="left">Ranger os dentes durante o sono:</div>
+        <div class="right">
+          <!-- Radio button para 0 -->
+          <input type="radio" id="dentes-0" name="dentes" value="0">
+          <label for="dentes-0">0</label>
+
+          <!-- Radio button para 2 -->
+          <input type="radio" id="dentes-2" name="dentes" value="2">
+          <label for="dentes-2">2</label>
+
+          <!-- Radio button para 4 -->
+          <input type="radio" id="dentes-4" name="dentes" value="4">
+          <label for="dentes-4">4</label>
+
+          <!-- Radio button para 6 -->
+          <input type="radio" id="dentes-6" name="dentes" value="6">
+          <label for="dentes-6">6</label>
+        </div>
+      </div>
+
+      <!-- Pergunta 12 -->
+      <div class="question">
+        <div class="left">Mexer no nariz, coçar com o dedo:</div>
+        <div class="right">
+          <!-- Radio button para 0 -->
+          <input type="radio" id="nariz-dedo-0" name="nariz-dedo" value="0">
+          <label for="nariz-dedo-0">0</label>
+
+          <!-- Radio button para 2 -->
+          <input type="radio" id="nariz-dedo-2" name="nariz-dedo" value="2">
+          <label for="nariz-dedo-2">2</label>
+
+          <!-- Radio button para 4 -->
+          <input type="radio" id="nariz-dedo-4" name="nariz-dedo" value="4">
+          <label for="nariz-dedo-4">4</label>
+
+          <!-- Radio button para 6 -->
+          <input type="radio" id="nariz-dedo-6" name="nariz-dedo" value="6">
+          <label for="nariz-dedo-6">6</label>
+        </div>
+      </div>
+
+      <!-- Pergunta 13 -->
+      <div class="question">
+        <div class="left">Excesso de secreção no nariz:</div>
+        <div class="right">
+          <!-- Radio button para 0 -->
+          <input type="radio" id="secrecao-0" name="secrecao" value="0">
+          <label for="secrecao-0">0</label>
+
+          <!-- Radio button para 2 -->
+          <input type="radio" id="secrecao-2" name="secrecao" value="2">
+          <label for="secrecao-2">2</label>
+
+          <!-- Radio button para 4 -->
+          <input type="radio" id="secrecao-4" name="secrecao" value="4">
+          <label for="secrecao-4">4</label>
+
+          <!-- Radio button para 6 -->
+          <input type="radio" id="secrecao-6" name="secrecao" value="6">
+          <label for="secrecao-6">6</label>
+        </div>
+      </div>
+
+      <!-- Pergunta 14 -->
+      <div class="question">
+        <div class="left">Roer unhas:</div>
+        <div class="right">
+          <!-- Radio button para 0 -->
+          <input type="radio" id="unhas-0" name="unhas" value="0">
+          <label for="unhas-0">0</label>
+
+          <!-- Radio button para 1 -->
+          <input type="radio" id="unhas-1" name="unhas" value="1">
+          <label for="unhas-1">1</label>
+
+          <!-- Radio button para 2 -->
+          <input type="radio" id="unhas-2" name="unhas" value="2">
+          <label for="unhas-2">2</label>
+
+          <!-- Radio button para 3 -->
+          <input type="radio" id="unhas-3" name="unhas" value="3">
+          <label for="unhas-3">3</label>
+        </div>
+      </div>
+
+      <!-- Pergunta 15 -->
+      <div class="question">
+        <div class="left">Dores de cabeça/enxaquecas:</div>
+        <div class="right">
+          <!-- Radio button para 0 -->
+          <input type="radio" id="cabeca-enxaqueca-0" name="cabeça-enxaqueca" value="0">
+          <label for="cabeca-enxaqueca-0">0</label>
+
+          <!-- Radio button para 2 -->
+          <input type="radio" id="cabeca-enxaqueca-2" name="cabeça-enxaqueca" value="2">
+          <label for="cabeca-enxaqueca-2">2</label>
+
+          <!-- Radio button para 4 -->
+          <input type="radio" id="cabeca-enxaqueca-4" name="cabeça-enxaqueca" value="4">
+          <label for="cabeca-enxaqueca-4">4</label>
+
+          <!-- Radio button para 6 -->
+          <input type="radio" id="cabeca-enxaqueca-6" name="cabeça-enxaqueca" value="6">
+          <label for="cabeca-enxaqueca-6">6</label>
+        </div>
+      </div>
+
+      <!-- Pergunta 16 -->
+      <div class="question">
+        <div class="left">Irritabilidade sem razão aparente:</div>
+        <div class="right">
+          <!-- Radio button para 0 -->
+          <input type="radio" id="irritabilidade-0" name="irritabilidade" value="0">
+          <label for="irritabilidade-0">0</label>
+
+          <!-- Radio button para 1 -->
+          <input type="radio" id="irritabilidade-1" name="irritabilidade" value="1">
+          <label for="irritabilidade-1">1</label>
+
+          <!-- Radio button para 2 -->
+          <input type="radio" id="irritabilidade-2" name="irritabilidade" value="2">
+          <label for="irritabilidade-2">2</label>
+
+          <!-- Radio button para 3 -->
+          <input type="radio" id="irritabilidade-3" name="irritabilidade" value="3">
+          <label for="irritabilidade-3">3</label>
+        </div>
+      </div>
+
+
+      <!-- Pergunta 17 -->
+      <div class="question">
+        <div class="left">Transtornos de humor, depressão, ansiedade ou pensamentos suicidas:</div>
+        <div class="right">
+          <!-- Radio button para 0 -->
+          <input type="radio" id="depressao-0" name="depressao" value="0">
+          <label for="depressao-0">0</label>
+
+          <!-- Radio button para 1 -->
+          <input type="radio" id="depressao-1" name="depressao" value="1">
+          <label for="depressao-1">1</label>
+
+          <!-- Radio button para 2 -->
+          <input type="radio" id="depressao-2" name="depressao" value="2">
+          <label for="depressao-2">2</label>
+
+          <!-- Radio button para 3 -->
+          <input type="radio" id="depressao-3" name="depressao" value="3">
+          <label for="depressao-3">3</label>
+        </div>
+      </div>
+
+      <!-- Pergunta 18 -->
+      <div class="question">
+        <div class="left">Tendência hiperativa (nervosismo):</div>
+        <div class="right">
+          <!-- Radio button para 0 -->
+          <input type="radio" id="nervosismo-0" name="nervosismo" value="0">
+          <label for="nervosismo-0">0</label>
+
+          <!-- Radio button para 1 -->
+          <input type="radio" id="nervosismo-1" name="nervosismo" value="1">
+          <label for="nervosismo-1">1</label>
+
+          <!-- Radio button para 2 -->
+          <input type="radio" id="nervosismo-2" name="nervosismo" value="2">
+          <label for="nervosismo-2">2</label>
+
+          <!-- Radio button para 3 -->
+          <input type="radio" id="nervosismo-3" name="nervosismo" value="3">
+          <label for="nervosismo-3">3</label>
+        </div>
+      </div>
+
+      <!-- Pergunta 19 -->
+      <div class="question">
+        <div class="left">Olheiras:</div>
+        <div class="right">
+          <!-- Radio button para 0 -->
+          <input type="radio" id="olheiras-0" name="olheiras" value="0">
+          <label for="olheiras-0">0</label>
+
+          <!-- Radio button para 2 -->
+          <input type="radio" id="olheiras-2" name="olheiras" value="2">
+          <label for="olheiras-2">2</label>
+
+          <!-- Radio button para 4 -->
+          <input type="radio" id="olheiras-4" name="olheiras" value="4">
+          <label for="olheiras-4">4</label>
+
+          <!-- Radio button para 6 -->
+          <input type="radio" id="olheiras-6" name="olheiras" value="6">
+          <label for="olheiras-6">6</label>
+        </div>
+      </div>
+
+      <!-- Pergunta 20 -->
+      <div class="question">
+        <div class="left">Necessidade de sono extra, acordar sem sentir-se renovado:</div>
+        <div class="right">
+          <!-- Radio button para 0 -->
+          <input type="radio" id="sono-0" name="sono" value="0">
+          <label for="sono-0">0</label>
+
+          <!-- Radio button para 1 -->
+          <input type="radio" id="sono-1" name="sono" value="1">
+          <label for="sono-1">1</label>
+
+          <!-- Radio button para 2 -->
+          <input type="radio" id="sono-2" name="sono" value="2">
+          <label for="sono-2">2</label>
+
+          <!-- Radio button para 3 -->
+          <input type="radio" id="sono-3" name="sono" value="3">
+          <label for="sono-3">3</label>
+        </div>
+      </div>
+
+      <!-- Pergunta 21 -->
+      <div class="question">
+        <div class="left">Alergias e/ou sensibilidades alimentares:</div>
+        <div class="right">
+          <!-- Radio button para 0 -->
+          <input type="radio" id="alergia-alimentar-0" name="alergia-alimentar" value="0">
+          <label for="alergia-alimentar-0">0</label>
+
+          <!-- Radio button para 2 -->
+          <input type="radio" id="alergia-alimentar-2" name="alergia-alimentar" value="2">
+          <label for="alergia-alimentar-2">2</label>
+
+          <!-- Radio button para 3 -->
+          <input type="radio" id="alergia-alimentar-3" name="alergia-alimentar" value="3">
+          <label for="alergia-alimentar-3">3</label>
+
+          <!-- Radio button para 4 -->
+          <input type="radio" id="alergia-alimentar-4" name="alergia-alimentar" value="4">
+          <label for="alergia-alimentar-4">4</label>
+        </div>
+      </div>
+
+      <!-- Pergunta 22 -->
+      <div class="question">
+        <div class="left">Febres sem causa conhecida:</div>
+        <div class="right">
+          <!-- Radio button para 0 -->
+          <input type="radio" id="febre-0" name="febre" value="0">
+          <label for="febre-0">0</label>
+
+          <!-- Radio button para 1 -->
+          <input type="radio" id="febre-1" name="febre" value="1">
+          <label for="febre-1">1</label>
+
+          <!-- Radio button para 2 -->
+          <input type="radio" id="febre-2" name="febre" value="2">
+          <label for="febre-2">2</label>
+
+          <!-- Radio button para 3 -->
+          <input type="radio" id="febre-3" name="febre" value="3">
+          <label for="febre-3">3</label>
+        </div>
+      </div>
+
+      <!-- Pergunta 23 -->
+      <div class="question">
+        <div class="left">Suores noturnos (não relacionados à menopausa):</div>
+        <div class="right">
+          <!-- Radio button para 0 -->
+          <input type="radio" id="suores-0" name="suores" value="0">
+          <label for="suores-0">0</label>
+
+          <!-- Radio button para 1 -->
+          <input type="radio" id="suores-1" name="suores" value="1">
+          <label for="suores-1">1</label>
+
+          <!-- Radio button para 2 -->
+          <input type="radio" id="suores-2" name="suores" value="2">
+          <label for="suores-2">2</label>
+
+          <!-- Radio button para 3 -->
+          <input type="radio" id="suores-3" name="suores" value="3">
+          <label for="suores-3">3</label>
+        </div>
+      </div>
+
+      <!-- Pergunta 24 -->
+      <div class="question">
+        <div class="left">Beijar animais de estimação, deixar que eles lambam seu rosto:</div>
+        <div class="right">
+          <!-- Radio button para 0 -->
+          <input type="radio" id="animais-0" name="animais" value="0">
+          <label for="animais-0">0</label>
+
+          <!-- Radio button para 1 -->
+          <input type="radio" id="animais-1" name="animais" value="1">
+          <label for="animais-1">1</label>
+
+          <!-- Radio button para 2 -->
+          <input type="radio" id="animais-2" name="animais" value="2">
+          <label for="animais-2">2</label>
+
+          <!-- Radio button para 3 -->
+          <input type="radio" id="animais-3" name="animais" value="3">
+          <label for="animais-3">3</label>
+        </div>
+      </div>
+
+      <!-- Pergunta 25 -->
+      <div class="question">
+        <div class="left">Aumento dos sintomas próximo à lua cheia:</div>
+        <div class="right">
+          <!-- Radio button para 0 -->
+          <input type="radio" id="lua-0" name="lua" value="0">
+          <label for="lua-0">0</label>
+
+          <!-- Radio button para 2 -->
+          <input type="radio" id="lua-2" name="lua" value="2">
+          <label for="lua-2">2</label>
+
+          <!-- Radio button para 6 -->
+          <input type="radio" id="lua-6" name="lua" value="6">
+          <label for="lua-6">6</label>
+
+          <!-- Radio button para 8 -->
+          <input type="radio" id="lua-8" name="lua" value="8">
+          <label for="lua-8">8</label>
+        </div>
+      </div>
+
+
+      <!-- Pergunta 26 -->
+      <div class="question">
+        <div class="left">Anemia (níveis baixos de ferro/hemoglobina em exame de sangue):</div>
+        <div class="right">
+          <!-- Radio button para 0 -->
+          <input type="radio" id="anemia-0" name="anemia" value="0">
+          <label for="anemia-0">0</label>
+
+          <!-- Radio button para 1 -->
+          <input type="radio" id="anemia-1" name="anemia" value="1">
+          <label for="anemia-1">1</label>
+
+          <!-- Radio button para 2 -->
+          <input type="radio" id="anemia-2" name="anemia" value="2">
+          <label for="anemia-2">2</label>
+
+          <!-- Radio button para 3 -->
+          <input type="radio" id="anemia-3" name="anemia" value="3">
+          <label for="anemia-3">3</label>
+        </div>
+      </div>
+
+      <!-- Pergunta 27 -->
+      <div class="question">
+        <div class="left">Deficiência de ferro:</div>
+        <div class="right">
+          <!-- Radio button para 0 -->
+          <input type="radio" id="ferro-0" name="ferro" value="0">
+          <label for="ferro-0">0</label>
+
+          <!-- Radio button para 2 -->
+          <input type="radio" id="ferro-2" name="ferro" value="2">
+          <label for="ferro-2">2</label>
+
+          <!-- Radio button para 4 -->
+          <input type="radio" id="ferro-4" name="ferro" value="4">
+          <label for="ferro-4">4</label>
+
+          <!-- Radio button para 6 -->
+          <input type="radio" id="ferro-6" name="ferro" value="6">
+          <label for="ferro-6">6</label>
+        </div>
+      </div>
+
+      <!-- Pergunta 28 -->
+      <div class="question">
+        <div class="left">Deficiência de vitamina B6:</div>
+        <div class="right">
+          <!-- Radio button para 0 -->
+          <input type="radio" id="b6-0" name="b6" value="0">
+          <label for="b6-0">0</label>
+
+          <!-- Radio button para 2 -->
+          <input type="radio" id="b6-2" name="b6" value="2">
+          <label for="b6-2">2</label>
+
+          <!-- Radio button para 4 -->
+          <input type="radio" id="b6-4" name="b6" value="4">
+          <label for="b6-4">4</label>
+
+          <!-- Radio button para 6 -->
+          <input type="radio" id="b6-6" name="b6" value="6">
+          <label for="b6-6">6</label>
+        </div>
+      </div>
+
+      <!-- Pergunta 29 -->
+      <div class="question">
+        <div class="left">Deficiência de zinco e/ou manchas brancas nas unhas:</div>
+        <div class="right">
+          <!-- Radio button para 0 -->
+          <input type="radio" id="zinco-0" name="zinco" value="0">
+          <label for="zinco-0">0</label>
+
+          <!-- Radio button para 2 -->
+          <input type="radio" id="zinco-2" name="zinco" value="2">
+          <label for="zinco-2">2</label>
+
+          <!-- Radio button para 4 -->
+          <input type="radio" id="zinco-4" name="zinco" value="4">
+          <label for="zinco-4">4</label>
+
+          <!-- Radio button para 6 -->
+          <input type="radio" id="zinco-6" name="zinco" value="6">
+          <label for="zinco-6">6</label>
+        </div>
+      </div>
+
+      <!-- Pergunta 30 -->
+      <div class="question">
+        <div class="left">Resfriados frequentes, gripes, dores de garganta:</div>
+        <div class="right">
+          <!-- Radio button para 0 -->
+          <input type="radio" id="resfriado-0" name="resfriado" value="0">
+          <label for="resfriado-0">0</label>
+
+          <!-- Radio button para 1 -->
+          <input type="radio" id="resfriado-1" name="resfriado" value="1">
+          <label for="resfriado-1">1</label>
+
+          <!-- Radio button para 2 -->
+          <input type="radio" id="resfriado-2" name="resfriado" value="2">
+          <label for="resfriado-2">2</label>
+
+          <!-- Radio button para 3 -->
+          <input type="radio" id="resfriado-3" name="resfriado" value="3">
+          <label for="resfriado-3">3</label>
+        </div>
+      </div>
+
+      <!-- Pergunta 31 -->
+      <div class="question">
+        <div class="left">Viagem a países em desenvolvimento:</div>
+        <div class="right">
+          <!-- Radio button para 0 -->
+          <input type="radio" id="viagen-0" name="viagen" value="0">
+          <label for="viagen-0">0</label>
+
+          <!-- Radio button para 2 -->
+          <input type="radio" id="viagen-2" name="viagen" value="2">
+          <label for="viagen-2">2</label>
+
+          <!-- Radio button para 4 -->
+          <input type="radio" id="viagen-4" name="viagen" value="4">
+          <label for="viagen-4">4</label>
+
+          <!-- Radio button para 6 -->
+          <input type="radio" id="viagen-6" name="viagen" value="6">
+          <label for="viagen-6">6</label>
+        </div>
+      </div>
+
+
+      <!-- Pergunta 32 -->
+      <div class="question">
+        <div class="left">Consumo de produtos de carne de porco:</div>
+        <div class="right">
+          <!-- Radio button para 0 -->
+          <input type="radio" id="porco-0" name="porco" value="0">
+          <label for="porco-0">0</label>
+
+          <!-- Radio button para 1 -->
+          <input type="radio" id="porco-1" name="porco" value="1">
+          <label for="porco-1">1</label>
+
+          <!-- Radio button para 2 -->
+          <input type="radio" id="porco-2" name="porco" value="2">
+          <label for="porco-2">2</label>
+
+          <!-- Radio button para 3 -->
+          <input type="radio" id="porco-3" name="porco" value="3">
+          <label for="porco-3">3</label>
+        </div>
+      </div>
+
+      <!-- Pergunta 33 -->
+      <div class="question">
+        <div class="left">Consumo de sushi ou peixe cru:</div>
+        <div class="right">
+          <!-- Radio button para 0 -->
+          <input type="radio" id="sushi-0" name="sushi" value="0">
+          <label for="sushi-0">0</label>
+
+          <!-- Radio button para 2 -->
+          <input type="radio" id="sushi-2" name="sushi" value="2">
+          <label for="sushi-2">2</label>
+
+          <!-- Radio button para 4 -->
+          <input type="radio" id="sushi-4" name="sushi" value="4">
+          <label for="sushi-4">4</label>
+
+          <!-- Radio button para 6 -->
+          <input type="radio" id="sushi-6" name="sushi" value="6">
+          <label for="sushi-6">6</label>
+        </div>
+      </div>
+
+      <!-- Pergunta 34 -->
+      <div class="question">
+        <div class="left">Dormir com animais de estimação na cama:</div>
+        <div class="right">
+          <!-- Radio button para 0 -->
+          <input type="radio" id="animais-cama-0" name="animais-cama" value="0">
+          <label for="animais-cama-0">0</label>
+
+          <!-- Radio button para 1 -->
+          <input type="radio" id="animais-cama-1" name="animais-cama" value="1">
+          <label for="animais-cama-1">1</label>
+
+          <!-- Radio button para 2 -->
+          <input type="radio" id="animais-cama-2" name="animais-cama" value="2">
+          <label for="animais-cama-2">2</label>
+
+          <!-- Radio button para 3 -->
+          <input type="radio" id="animais-cama-3" name="animais-cama" value="3">
+          <label for="animais-cama-3">3</label>
+        </div>
+      </div>
+
+      <!-- Pergunta 35 -->
+      <div class="question">
+        <div class="left">Enurese noturna (xixi na cama):</div>
+        <div class="right">
+          <!-- Radio button para 0 -->
+          <input type="radio" id="xixi-0" name="xixi" value="0">
+          <label for="xixi-0">0</label>
+
+          <!-- Radio button para 1 -->
+          <input type="radio" id="xixi-1" name="xixi" value="1">
+          <label for="xixi-1">1</label>
+
+          <!-- Radio button para 2 -->
+          <input type="radio" id="xixi-2" name="xixi" value="2">
+          <label for="xixi-2">2</label>
+
+          <!-- Radio button para 3 -->
+          <input type="radio" id="xixi-3" name="xixi" value="3">
+          <label for="xixi-3">3</label>
+        </div>
+      </div>
+
+      <!-- Pergunta 36 -->
+      <div class="question">
+        <div class="left">Vômito frequente:</div>
+        <div class="right">
+          <!-- Radio button para 0 -->
+          <input type="radio" id="vomito-0" name="vomito" value="0">
+          <label for="vomito-0">0</label>
+
+          <!-- Radio button para 1 -->
+          <input type="radio" id="vomito-1" name="vomito" value="1">
+          <label for="vomito-1">1</label>
+
+          <!-- Radio button para 2 -->
+          <input type="radio" id="vomito-2" name="vomito" value="2">
+          <label for="vomito-2">2</label>
+
+          <!-- Radio button para 3 -->
+          <input type="radio" id="vomito-3" name="vomito" value="3">
+          <label for="vomito-3">3</label>
+        </div>
+      </div>
+
+      <!-- Pergunta 37 -->
+      <div class="question">
+        <div class="left">Perda de apetite:</div>
+        <div class="right">
+          <!-- Radio button para 0 -->
+          <input type="radio" id="apetite-0" name="apetite" value="0">
+          <label for="apetite-0">0</label>
+
+          <!-- Radio button para 1 -->
+          <input type="radio" id="apetite-1" name="apetite" value="1">
+          <label for="apetite-1">1</label>
+
+          <!-- Radio button para 2 -->
+          <input type="radio" id="apetite-2" name="apetite" value="2">
+          <label for="apetite-2">2</label>
+
+          <!-- Radio button para 3 -->
+          <input type="radio" id="apetite-3" name="apetite" value="3">
+          <label for="apetite-3">3</label>
+        </div>
+      </div>
+
+      <!-- Pergunta 38 -->
+      <div class="question">
+        <div class="left">Fome constante, "buraco sem fundo", fome após as refeições:</div>
+        <div class="right">
+          <!-- Radio button para 0 -->
+          <input type="radio" id="fome-0" name="fome" value="0">
+          <label for="fome-0">0</label>
+
+          <!-- Radio button para 2 -->
+          <input type="radio" id="fome-2" name="fome" value="2">
+          <label for="fome-2">2</label>
+
+          <!-- Radio button para 4 -->
+          <input type="radio" id="fome-4" name="fome" value="4">
+          <label for="fome-4">4</label>
+
+          <!-- Radio button para 6 -->
+          <input type="radio" id="fome-6" name="fome" value="6">
+          <label for="fome-6">6</label>
+        </div>
+      </div>
+
+      <!-- Pergunta 39 -->
+      <div class="question">
+        <div class="left">Forte desejo por açúcar e alimentos processados:</div>
+        <div class="right">
+          <!-- Radio button para 0 -->
+          <input type="radio" id="desejo-0" name="desejo" value="0">
+          <label for="desejo-0">0</label>
+
+          <!-- Radio button para 1 -->
+          <input type="radio" id="desejo-1" name="desejo" value="1">
+          <label for="desejo-1">1</label>
+
+          <!-- Radio button para 2 -->
+          <input type="radio" id="desejo-2" name="desejo" value="2">
+          <label for="desejo-2">2</label>
+
+          <!-- Radio button para 3 -->
+          <input type="radio" id="desejo-3" name="desejo" value="3">
+          <label for="desejo-3">3</label>
+        </div>
+      </div>
+
+      <!-- Pergunta 40 -->
+      <div class="question">
+        <div class="left">Problemas respiratórios, asma:</div>
+        <div class="right">
+          <!-- Radio button para 0 -->
+          <input type="radio" id="asma-0" name="asma" value="0">
+          <label for="asma-0">0</label>
+
+          <!-- Radio button para 2 -->
+          <input type="radio" id="asma-2" name="asma" value="2">
+          <label for="asma-2">2</label>
+
+          <!-- Radio button para 4 -->
+          <input type="radio" id="asma-4" name="asma" value="4">
+          <label for="asma-4">4</label>
+
+          <!-- Radio button para 6 -->
+          <input type="radio" id="asma-6" name="asma" value="6">
+          <label for="asma-6">6</label>
+        </div>
+      </div>
+
+      <!-- Pergunta 41 -->
+      <div class="question">
+        <div class="left">Dor na região do umbigo:</div>
+        <div class="right">
+          <!-- Radio button para 0 -->
+          <input type="radio" id="umbigo-0" name="umbigo" value="0">
+          <label for="umbigo-0">0</label>
+
+          <!-- Radio button para 1 -->
+          <input type="radio" id="umbigo-1" name="umbigo" value="1">
+          <label for="umbigo-1">1</label>
+
+          <!-- Radio button para 2 -->
+          <input type="radio" id="umbigo-2" name="umbigo" value="2">
+          <label for="umbigo-2">2</label>
+
+          <!-- Radio button para 3 -->
+          <input type="radio" id="umbigo-3" name="umbigo" value="3">
+          <label for="umbigo-3">3</label>
+        </div>
+      </div>
+
+      <!-- Pergunta 42 -->
+      <div class="question">
+        <div class="left">Visão turva, desfocada:</div>
+        <div class="right">
+          <!-- Radio button para 0 -->
+          <input type="radio" id="desfocada-0" name="desfocada" value="0">
+          <label for="desfocada-0">0</label>
+
+          <!-- Radio button para 1 -->
+          <input type="radio" id="desfocada-1" name="desfocada" value="1">
+          <label for="desfocada-1">1</label>
+
+          <!-- Radio button para 2 -->
+          <input type="radio" id="desfocada-2" name="desfocada" value="2">
+          <label for="desfocada-2">2</label>
+
+          <!-- Radio button para 3 -->
+          <input type="radio" id="desfocada-3" name="desfocada" value="3">
+          <label for="desfocada-3">3</label>
+        </div>
+      </div>
+
+      <!-- Pergunta 43 -->
+      <div class="question">
+        <div class="left">Moscas volantes nos olhos (manchas na visão):</div>
+        <div class="right">
+          <!-- Radio button para 0 -->
+          <input type="radio" id="moscas-0" name="moscas" value="0">
+          <label for="moscas-0">0</label>
+
+          <!-- Radio button para 2 -->
+          <input type="radio" id="moscas-2" name="moscas" value="2">
+          <label for="moscas-2">2</label>
+
+          <!-- Radio button para 4 -->
+          <input type="radio" id="moscas-4" name="moscas" value="4">
+          <label for="moscas-4">4</label>
+
+          <!-- Radio button para 6 -->
+          <input type="radio" id="moscas-6" name="moscas" value="6">
+          <label for="moscas-6">6</label>
+        </div>
+      </div>
+
+      <!-- Pergunta 44 -->
+      <div class="question">
+        <div class="left">Letargia, apatia (desinteresse):</div>
+        <div class="right">
+          <!-- Radio button para 0 -->
+          <input type="radio" id="letargia-0" name="letargia" value="0">
+          <label for="letargia-0">0</label>
+
+          <!-- Radio button para 1 -->
+          <input type="radio" id="letargia-1" name="letargia" value="1">
+          <label for="letargia-1">1</label>
+
+          <!-- Radio button para 2 -->
+          <input type="radio" id="letargia-2" name="letargia" value="2">
+          <label for="letargia-2">2</label>
+
+          <!-- Radio button para 3 -->
+          <input type="radio" id="letargia-3" name="letargia" value="3">
+          <label for="letargia-3">3</label>
+        </div>
+      </div>
+      <!-- Pergunta 45 -->
+      <div class="question">
+        <div class="left">Problemas menstruais:</div>
+        <div class="right">
+          <!-- Radio button para 0 -->
+          <input type="radio" id="menstruais-0" name="menstruais" value="0">
+          <label for="menstruais-0">0</label>
+
+          <!-- Radio button para 1 -->
+          <input type="radio" id="menstruais-1" name="menstruais" value="1">
+          <label for="menstruais-1">1</label>
+
+          <!-- Radio button para 2 -->
+          <input type="radio" id="menstruais-2" name="menstruais" value="2">
+          <label for="menstruais-2">2</label>
+
+          <!-- Radio button para 3 -->
+          <input type="radio" id="menstruais-3" name="menstruais" value="3">
+          <label for="menstruais-3">3</label>
+        </div>
+      </div>
+
+      <!-- Pergunta 46 -->
+      <div class="question">
+        <div class="left">Lábios secos:</div>
+        <div class="right">
+          <!-- Radio button para 0 -->
+          <input type="radio" id="labios-0" name="labios" value="0">
+          <label for="labios-0">0</label>
+
+          <!-- Radio button para 1 -->
+          <input type="radio" id="labios-1" name="labios" value="1">
+          <label for="labios-1">1</label>
+
+          <!-- Radio button para 2 -->
+          <input type="radio" id="labios-2" name="labios" value="2">
+          <label for="labios-2">2</label>
+
+          <!-- Radio button para 3 -->
+          <input type="radio" id="labios-3" name="labios" value="3">
+          <label for="labios-3">3</label>
+        </div>
+      </div>
+
+
+      <!-- Pergunta 47 -->
+      <div class="question">
+        <div class="left">Babar enquanto dorme:</div>
+        <div class="right">
+          <!-- Radio button para 0 -->
+          <input type="radio" id="dorme-0" name="dorme" value="0">
+          <label for="dorme-0">0</label>
+
+          <!-- Radio button para 1 -->
+          <input type="radio" id="dorme-1" name="dorme" value="1">
+          <label for="dorme-1">1</label>
+
+          <!-- Radio button para 2 -->
+          <input type="radio" id="dorme-2" name="dorme" value="2">
+          <label for="dorme-2">2</label>
+
+          <!-- Radio button para 3 -->
+          <input type="radio" id="dorme-3" name="dorme" value="3">
+          <label for="dorme-3">3</label>
+        </div>
+      </div>
+
+      <!-- Pergunta 48 -->
+      <div class="question">
+        <div class="left">Sangue oculto nas fezes (em exame laboratorial):</div>
+        <div class="right">
+          <!-- Radio button para 0 -->
+          <input type="radio" id="sangue-oculto-0" name="sangue-oculto" value="0">
+          <label for="sangue-oculto-0">0</label>
+
+          <!-- Radio button para 1 -->
+          <input type="radio" id="sangue-oculto-1" name="sangue-oculto" value="1">
+          <label for="sangue-oculto-1">1</label>
+
+          <!-- Radio button para 2 -->
+          <input type="radio" id="sangue-oculto-2" name="sangue-oculto" value="2">
+          <label for="sangue-oculto-2">2</label>
+
+          <!-- Radio button para 3 -->
+          <input type="radio" id="sangue-oculto-3" name="sangue-oculto" value="3">
+          <label for="sangue-oculto-3">3</label>
+        </div>
+      </div>
+
+
+      <!-- Pergunta 49 -->
+      <!-- Pergunta 49 -->
+      <div class="question">
+        <div class="left">Nadar em riachos, rios, lagos:</div>
+        <div class="right">
+          <!-- Radio button para 0 -->
+          <input type="radio" id="riachos-0" name="riachos" value="0">
+          <label for="riachos-0">0</label>
+
+          <!-- Radio button para 2 -->
+          <input type="radio" id="riachos-2" name="riachos" value="2">
+          <label for="riachos-2">2</label>
+
+          <!-- Radio button para 4 -->
+          <input type="radio" id="riachos-4" name="riachos" value="4">
+          <label for="riachos-4">4</label>
+
+          <!-- Radio button para 6 -->
+          <input type="radio" id="riachos-6" name="riachos" value="6">
+          <label for="riachos-6">6</label>
+        </div>
+      </div>
+
+
+
+
+       <!-- Perguntas Sim/Não -->
+  <div class="section">
+    <h2>Marque Sim ou Não</h2>
+
+    <!-- Pergunta 1 -->
+    <div class="question">
+      <div class="left">Beijar animais de estimação, deixar que eles lambam seu rosto:</div>
+      <div class="right">
+        <!-- Sim -->
+        <input type="radio" id="pet-sim" name="pet" value="6">
+        <label for="pet-sim">Sim</label>
+        <!-- Não -->
+        <input type="radio" id="pet-nao" name="pet" value="0">
+        <label for="pet-nao">Não</label>
+      </div>
+    </div>
+
+    <!-- Pergunta 2 -->
+    <div class="question">
+      <div class="left">Você trabalha com cuidado de crianças?</div>
+      <div class="right">
+        <!-- Sim -->
+        <input type="radio" id="children-sim" name="children" value="6">
+        <label for="children-sim">Sim</label>
+        <!-- Não -->
+        <input type="radio" id="children-nao" name="children" value="0">
+        <label for="children-nao">Não</label>
+      </div>
+    </div>
+
+    <!-- Pergunta 3 -->
+    <div class="question">
+      <div class="left">Histórico de giárdia, oxiúros ou outros parasitas?</div>
+      <div class="right">
+        <!-- Sim -->
+        <input type="radio" id="parasites-sim" name="parasites" value="6">
+        <label for="parasites-sim">Sim</label>
+        <!-- Não -->
+        <input type="radio" id="parasites-nao" name="parasites" value="0">
+        <label for="parasites-nao">Não</label>
+      </div>
+    </div>
+
+    <!-- Pergunta 4 -->
+    <div class="question">
+      <div class="left">Histórico de câncer ou possui câncer atualmente?</div>
+      <div class="right">
+        <!-- Sim -->
+        <input type="radio" id="cancer-sim" name="cancer" value="6">
+        <label for="cancer-sim">Sim</label>
+        <!-- Não -->
+        <input type="radio" id="cancer-nao" name="cancer" value="0">
+        <label for="cancer-nao">Não</label>
+      </div>
+    </div>
+  </div>
+
+
+
+  
+  <!-- Botões -->
+  <div class="buttons">
+    <button type="button" id="calculateButton">Calcular Pontuação</button>
+    <button type="button" id="sendButton" disabled>Enviar Resultado</button>
+  </div>
+  </form>
+  <div id="result"></div>
+  <!-- Área para exibir a categoria de zona -->
+  <div id="categoryResult" class="category-result">
+    <h2>CATEGORIA DE ZONA:</h2>
+    <p id="categoryDescription"></p>
+  </div>
+  <div>
+            
+    <p><span style="background-color: #afc4db31; color: rgba(19, 1, 1, 0.678); text-align:justify;">
+
+        Ellen Guglielmetti
+        CRF/RN: 3148</strong>
+</p>
+<p> 
+  
+</div>
+  </div>
+
+
+  </div>
+
+ 
+
+  <script src="script.js"></script>
+  <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+</body>
+
+</html>

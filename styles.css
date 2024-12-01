@@ -349,8 +349,8 @@ button:hover {
 @media (max-width: 768px) {
     .category-result {
         font-size: 16px; /* Reduz o tamanho da fonte para telas menores */
-        padding: 15px; /* Ajusta o padding */
-        max-width: 60vw; /* Define a largura máxima para telas médias */
+        padding: 8px; /* Ajusta o padding */
+        max-width: 100vw; /* Define a largura máxima para telas médias */
         width: 100%; /* Ajusta a largura da área para 90% da tela */
         margin-left: auto;
         margin-right: auto; /* Centraliza a área */
@@ -360,8 +360,8 @@ button:hover {
 @media (max-width: 480px) {
     .category-result {
         font-size: 16px; /* Tamanho da fonte ainda menor em telas muito pequenas */
-        padding: 10px; /* Ajuste do padding */
-        max-width: 60vw; /* Define a largura máxima para telas pequenas */
+        padding: 5px; /* Ajuste do padding */
+        max-width: 100vw; /* Define a largura máxima para telas pequenas */
         width: 100%; /* Ajusta a largura da área para 90% da tela */
         margin-left: auto;
         margin-right: auto; /* Centraliza a área */

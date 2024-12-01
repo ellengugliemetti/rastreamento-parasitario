@@ -90,11 +90,11 @@ document.getElementById("sendButton").addEventListener("click", function () {
   message += `Detalhes dos Sintomas Selecionados\n\n`;
 
   // Informações básicas
-  message += `Informações Básicas:\n`;
-  message += `Paciente: ${paciente}\n`;
-  message += `Idade: ${idade}\n`;
-  message += `Peso: ${peso} kg\n`;
-  message += `Altura: ${altura} cm\n\n`;
+  //message += `Informações Básicas:\n`;
+  //message += `Paciente: ${paciente}\n`;
+  //message += `Idade: ${idade}\n`;
+  //message += `Peso: ${peso} kg\n`;
+  //message += `Altura: ${altura} cm\n\n`;
 
   // Questões adicionais (respostas das perguntas)
   message += `Questões Adicionais:\n`;

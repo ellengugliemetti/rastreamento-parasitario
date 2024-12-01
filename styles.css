@@ -348,10 +348,10 @@ button:hover {
 /* Responsividade para a categoria-result */
 @media (max-width: 768px) {
     .category-result {
-        font-size: 16px; /* Reduz o tamanho da fonte para telas menores */
+        font-size: 14px; /* Reduz o tamanho da fonte para telas menores */
         padding: 8px; /* Ajusta o padding */
-        max-width: 100vw; /* Define a largura máxima para telas médias */
-        width: 100%; /* Ajusta a largura da área para 90% da tela */
+        max-width: 100%; /* Define a largura máxima para telas médias */
+        width: 90%; /* Ajusta a largura da área para 90% da tela */
         margin-left: auto;
         margin-right: auto; /* Centraliza a área */
     }
@@ -359,12 +359,19 @@ button:hover {
 
 @media (max-width: 480px) {
     .category-result {
-        font-size: 16px; /* Tamanho da fonte ainda menor em telas muito pequenas */
+        font-size: 14px; /* Tamanho da fonte ainda menor em telas muito pequenas */
         padding: 5px; /* Ajuste do padding */
         max-width: 100vw; /* Define a largura máxima para telas pequenas */
-        width: 100%; /* Ajusta a largura da área para 90% da tela */
+        width: 90%; /* Ajusta a largura da área para 90% da tela */
         margin-left: auto;
         margin-right: auto; /* Centraliza a área */
     }
+
+    .right {
+        display: flex;
+        justify-content: space-between;
+        gap: 8px; /* Espaçamento entre as colunas */
+        
+      }
 }
 

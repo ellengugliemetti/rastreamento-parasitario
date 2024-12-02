@@ -30,15 +30,16 @@ document.getElementById("calculateButton").addEventListener("click", function ()
   const categoryDescription = document.getElementById("categoryDescription");
 
   if (totalScore >= 0 && totalScore <= 46) {
-      categoryResultDiv.className = "category-result green";
-      categoryDescription.textContent = "Verde (0-46): Parasitas não são uma preocupação imediata.";
-  } else if (totalScore >= 47 && totalScore <= 96) {
-      categoryResultDiv.className = "category-result yellow";
-      categoryDescription.textContent = "Amarela (47-96): Priorizar o tratamento dos parasitas.";
-  } else if (totalScore >= 97) {
-      categoryResultDiv.className = "category-result red";
-      categoryDescription.textContent = "Vermelha (97-242): Parasitas são uma causa raiz significativa e devem ser tratados de forma intensiva.";
-  }
+    categoryResultDiv.className = "category-result green";
+    categoryDescription.textContent = "Verde (0-46): Parasitas não são uma preocupação imediata.";
+} else if (totalScore >= 47 && totalScore <= 96) {
+    categoryResultDiv.className = "category-result yellow";
+    categoryDescription.textContent = "Amarela (47-96): Priorizar o tratamento dos parasitas.";
+} else if (totalScore >= 97 && totalScore <= 242) {
+    categoryResultDiv.className = "category-result red";
+    categoryDescription.textContent = "Vermelha (97-242): Parasitas são uma causa raiz significativa e devem ser tratados de forma intensiva.";
+}
+
 
   // Exibe a descrição da categoria
   categoryResultDiv.innerHTML = categoryDescription.textContent;
